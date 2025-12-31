@@ -13,5 +13,14 @@
 -- SELECT brand, model, condition, price FROM cars
 -- WHERE price < 50000;
 
-SELECT brand, model, condition, price FROM cars
-WHERE condition >= 3;
+-- SELECT brand, model, condition, price FROM cars
+-- WHERE condition >= 3;
+
+-- SELECT brand, model, year, price FROM cars
+-- WHERE year != 1965;
+
+-- SELECT brand, model, year, price FROM cars
+-- WHERE year <> 1965;
+
+SELECT brand, model, price, color FROM cars
+WHERE color != 'yellow';
