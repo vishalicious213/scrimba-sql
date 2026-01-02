@@ -28,13 +28,15 @@
 - SELECT brand, model, year, price FROM cars WHERE year != 1965;
 - SELECT brand, model, year, price FROM cars WHERE year <> 1965;
 - SELECT brand, model, price, color FROM cars WHERE color != 'yellow';
-  *this will do an exact match for 'yellow'*
+  - *this will do an exact match for 'yellow'*
 
 ### NOT & LIKE
 
 - SELECT brand, model, color, year FROM cars WHERE color LIKE '%green%';
-  - *__%__ is a global wildcard, so ANY letters/numbers plus specified text are included*
+  - *`%` is a global wildcard, so ANY letters/numbers plus specified text are included*
   - *in this case, its used before & after 'green' so light green & green-yellow both work*
 - SELECT brand, model, color, year FROM cars WHERE color NOT LIKE '%green%';
   - *NOT negates the LIKE, so its used to exclude results, not include them*
   - *in this case, anything with 'green' isn't included in the results*
+- SELECT brand, model, color, year FROM cars WHERE model like 'DB_';
+  - *`_` is a wildcard for a single character, so a single letter/number plus specified text is included*

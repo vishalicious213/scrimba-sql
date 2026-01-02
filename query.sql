@@ -28,5 +28,8 @@
 -- SELECT brand, model, color, year FROM cars
 -- WHERE color LIKE '%green%';
 
+-- SELECT brand, model, color, year FROM cars
+-- WHERE color NOT LIKE '%green%';
+
 SELECT brand, model, color, year FROM cars
-WHERE color NOT LIKE '%green%';
+WHERE model like 'DB_';
