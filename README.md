@@ -53,3 +53,8 @@
 - SELECT brand, model, year, price FROM cars WHERE year >= 1980 AND year <= 1989;
 - SELECT brand, model, year, price FROM cars WHERE year BETWEEN 1980 AND 1989;
 - SELECT brand, model, condition, color, price FROM cars WHERE price BETWEEN 20000 AND 60000 AND condition BETWEEN 1 AND 3 AND color LIKE '%red%';
+
+### OR
+
+- SELECT brand, model, condition, price FROM cars WHERE price < 250000 OR brand = 'Porsche';
+- SELECT brand, model, condition, price FROM cars WHERE (price < 250000 OR brand = 'Porsche') AND condition > 3;
