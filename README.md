@@ -28,7 +28,7 @@
 - SELECT brand, model, year, price FROM cars WHERE year != 1965;
 - SELECT brand, model, year, price FROM cars WHERE year <> 1965;
 - SELECT brand, model, price, color FROM cars WHERE color != 'yellow';
-  - *this will do an exact match for 'yellow'*
+  - *this will do an exact match for where color does not equal 'yellow'*
 
 ### NOT & LIKE
 
@@ -40,3 +40,9 @@
   - *in this case, anything with 'green' isn't included in the results*
 - SELECT brand, model, color, year FROM cars WHERE model like 'DB_';
   - *`_` is a wildcard for a single character, so a single letter/number plus specified text is included*
+
+### AND
+
+- SELECT brand, model, color, year FROM cars WHERE color NOT LIKE '%green%' AND model LIKE 'DB_';
+- SELECT brand, model, color, year FROM cars WHERE color NOT LIKE '%green%' AND model LIKE 'DB_' AND year > 1964;
+- SELECT brand, model, year, condition, price FROM cars WHERE condition >= 3 AND year < 1970;
