@@ -46,3 +46,4 @@
 - SELECT brand, model, color, year FROM cars WHERE color NOT LIKE '%green%' AND model LIKE 'DB_';
 - SELECT brand, model, color, year FROM cars WHERE color NOT LIKE '%green%' AND model LIKE 'DB_' AND year > 1964;
 - SELECT brand, model, year, condition, price FROM cars WHERE condition >= 3 AND year < 1970;
+- SELECT brand, model, year, condition, price FROM cars WHERE condition >= 3 AND year < 1970 AND price < 100000;
