@@ -22,5 +22,8 @@
 -- SELECT brand, model, year, price FROM cars
 -- WHERE year <> 1965;
 
-SELECT brand, model, price, color FROM cars
-WHERE color != 'yellow';
+-- SELECT brand, model, price, color FROM cars
+-- WHERE color != 'yellow';
+
+SELECT brand, model, color, year FROM cars
+WHERE color LIKE '%green%';

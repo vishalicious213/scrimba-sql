@@ -28,3 +28,10 @@
 - SELECT brand, model, year, price FROM cars WHERE year != 1965;
 - SELECT brand, model, year, price FROM cars WHERE year <> 1965;
 - SELECT brand, model, price, color FROM cars WHERE color != 'yellow';
+  *this will do an exact match for 'yellow'*
+
+### NOT & LIKE
+
+- SELECT brand, model, color, year FROM cars WHERE color LIKE '%green%';
+  *percentage is a global wildcard, so ANY letters/numbers plus specified text are included*
+  *in this case, its used before & after 'green' so light green & green-yellow both work*
