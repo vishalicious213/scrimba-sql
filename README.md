@@ -33,5 +33,8 @@
 ### NOT & LIKE
 
 - SELECT brand, model, color, year FROM cars WHERE color LIKE '%green%';
-  *percentage is a global wildcard, so ANY letters/numbers plus specified text are included*
-  *in this case, its used before & after 'green' so light green & green-yellow both work*
+  - *__%__ is a global wildcard, so ANY letters/numbers plus specified text are included*
+  - *in this case, its used before & after 'green' so light green & green-yellow both work*
+- SELECT brand, model, color, year FROM cars WHERE color NOT LIKE '%green%';
+  - *NOT negates the LIKE, so its used to exclude results, not include them*
+  - *in this case, anything with 'green' isn't included in the results*
