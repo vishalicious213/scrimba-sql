@@ -77,7 +77,11 @@
 -- WHERE brand IN ('Ford', 'Chevrolet', 'Ferrari')
 -- AND sold = false;
 
-SELECT brand, model, condition, year FROM cars
-WHERE year in (1961, 1963, 1965, 1967, 1969)
-AND condition >= 3
-AND sold = false;
+-- SELECT brand, model, condition, year FROM cars
+-- WHERE year in (1961, 1963, 1965, 1967, 1969)
+-- AND condition >= 3
+-- AND sold = false;
+
+SELECT brand, model, price, sold FROM cars
+WHERE sold = false
+AND (brand NOT IN ('Ford', 'Triumph', 'Chevrolet', 'Dodge') OR price < 50000);
