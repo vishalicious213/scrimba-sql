@@ -80,6 +80,11 @@ SELECT brand, model, year, condition, price FROM cars
 WHERE condition >= 3 
 AND year < 1970 
 AND price < 100000;
+
+SELECT brand, model, color FROM cars
+WHERE color LIKE '%red%'
+AND brand != 'Ferrari'
+AND sold = false;
 ```
 
 ### BETWEEN
