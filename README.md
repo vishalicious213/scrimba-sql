@@ -123,6 +123,12 @@ WHERE color LIKE '%red%' OR year BETWEEN 1960 AND 1969;
 SELECT brand, model, color, year, price, sold FROM cars 
 WHERE (color LIKE '%red%' OR year BETWEEN 1960 AND 1969) 
 AND sold = false;
+
+SELECT brand, model, year, sold FROM cars
+WHERE ((brand = 'Dodge' AND year BETWEEN 1960 AND 1969)
+OR (brand = 'Ford' AND year BETWEEN 1970 AND 1979)
+OR (brand = 'Triumph' AND year BETWEEN 1970 AND 1979))
+AND sold = false;
 ```
 
 ### IN
