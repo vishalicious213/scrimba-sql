@@ -146,4 +146,9 @@ AND sold = false;
 SELECT brand, model, price, sold FROM cars
 WHERE sold = false
 AND (brand NOT IN ('Ford', 'Triumph', 'Chevrolet', 'Dodge') OR price < 50000);
+
+SELECT brand, model, year, sold FROM cars
+WHERE ((brand = 'Dodge' AND year BETWEEN 1960 AND 1969)
+OR (brand IN ('Ford', 'Triumph') AND year BETWEEN 1970 AND 1979))
+AND sold = false;
 ```
