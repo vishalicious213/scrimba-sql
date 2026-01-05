@@ -123,5 +123,20 @@
 -- SELECT COUNT(*) AS total_sold FROM cars
 -- WHERE sold = TRUE;
 
-SELECT SUM(price) AS total_earnings FROM cars
-WHERE sold = TRUE;
+-- SELECT SUM(price) AS total_earnings FROM cars
+-- WHERE sold = TRUE;
+
+-- SELECT MAX(price) AS most_expensive FROM cars
+-- WHERE sold = TRUE;
+
+-- SELECT AVG(price) FROM cars
+-- WHERE brand = 'Bentley';
+
+-- SELECT FLOOR(AVG(price)) FROM cars
+-- WHERE brand = 'Bentley';
+
+-- SELECT CEILING(AVG(price)) FROM cars
+-- WHERE brand = 'Bentley';
+
+SELECT CEILING(AVG(price)) AS avg, MIN(price), MAX(price) FROM cars
+WHERE sold = true;

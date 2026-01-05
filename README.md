@@ -24,6 +24,8 @@
 [__AGGREGATING RESULTS__](#aggregating-results)
 
 - COUNT & SUM
+- MAX, MIN & AVG
+- FLOOR & CEILING
 
 ## Selecting columns
 
@@ -239,3 +241,30 @@ WHERE sold = TRUE;
 
 ### MAX, MIN & AVG
 *finds the maximum, minimum & average value of a column*
+*looks like selecting a single value, but its selecting a column & reducing to 1 value*
+
+```sql
+SELECT MAX(price) AS most_expensive FROM cars
+WHERE sold = TRUE;
+
+SELECT AVG(price) FROM cars
+WHERE brand = 'Bentley';
+```
+
+### FLOOR & CEILING
+*use these to round down/up results for readability (remove long decimals)*
+*CEIL & CEILING are interchangeable, CEILING is universal, CEIL is supported in most SQL implementations*
+
+```SQL
+SELECT FLOOR(AVG(price)) FROM cars
+WHERE brand = 'Bentley';
+
+SELECT CEILING(AVG(price)) FROM cars
+WHERE brand = 'Bentley';
+
+SELECT FLOOR(AVG(price)) AS average FROM cars
+WHERE brand = 'Bentley';
+
+SELECT CEILING(AVG(price)) AS avg, MIN(price), MAX(price) FROM cars
+WHERE sold = true;
+```
