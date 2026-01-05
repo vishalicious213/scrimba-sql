@@ -82,6 +82,15 @@
 -- AND condition >= 3
 -- AND sold = false;
 
-SELECT brand, model, price, sold FROM cars
-WHERE sold = false
-AND (brand NOT IN ('Ford', 'Triumph', 'Chevrolet', 'Dodge') OR price < 50000);
+-- SELECT brand, model, price, sold FROM cars
+-- WHERE sold = false
+-- AND (brand NOT IN ('Ford', 'Triumph', 'Chevrolet', 'Dodge') OR price < 50000);
+
+-- SELECT brand, model, year FROM cars
+-- ORDER BY brand;
+
+-- SELECT brand, model, year FROM cars
+-- ORDER BY brand DESC;
+
+SELECT brand, model, year FROM cars
+ORDER BY brand DESC, year;

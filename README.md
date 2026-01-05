@@ -152,3 +152,16 @@ WHERE ((brand = 'Dodge' AND year BETWEEN 1960 AND 1969)
 OR (brand IN ('Ford', 'Triumph') AND year BETWEEN 1970 AND 1979))
 AND sold = false;
 ```
+
+### ORDER BY, DESC
+
+```sql
+SELECT brand, model, year FROM cars
+ORDER BY brand;
+
+SELECT brand, model, year FROM cars
+ORDER BY brand DESC;
+
+SELECT brand, model, year FROM cars
+ORDER BY brand DESC, year;
+```
