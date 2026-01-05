@@ -1,8 +1,25 @@
 # Scrimba Intro to SQL
 
-- brand, model, year, price, color, condition, sold
+BASIC KEYWORDS & QUERIES
 
-## Commands used per lesson
+- SELECT all
+- Selecting columns
+- WHERE clause
+- Numerical filtering
+- Not equal
+- NOT & LIKE
+- AND
+- BETWEEN
+- OR
+- IN
+- ORDER BY, DESC
+- LIMIT
+
+AGGREGATING RESULTS
+
+- COUNT & SUM
+
+## Basic keywords & queries
 
 ### SELECT all
 
@@ -187,3 +204,7 @@ AND sold = false
 ORDER BY price
 LIMIT 5;
 ```
+
+## Aggregating results
+
+### COUNT & SUM
