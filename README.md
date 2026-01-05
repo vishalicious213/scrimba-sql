@@ -1,9 +1,12 @@
 # Scrimba Intro to SQL
 
-BASIC KEYWORDS & QUERIES
+__SELECTING COLUMNS__
 
 - SELECT all
 - Selecting columns
+
+__FILTERING RESULTS__
+
 - WHERE clause
 - Numerical filtering
 - Not equal
@@ -12,14 +15,17 @@ BASIC KEYWORDS & QUERIES
 - BETWEEN
 - OR
 - IN
+
+__ORDERING, SORTING & LIMITING RESULTS__
+
 - ORDER BY, DESC
 - LIMIT
 
-AGGREGATING RESULTS
+__AGGREGATING RESULTS__
 
 - COUNT & SUM
 
-## Basic keywords & queries
+## Selecting columns
 
 ### SELECT all
 
@@ -34,6 +40,8 @@ SELECT brand, model, price FROM cars;
 
 SELECT brand, model, condition, year FROM cars;
 ```
+
+## Filtering results
 
 ### WHERE clause
 
@@ -169,6 +177,8 @@ WHERE ((brand = 'Dodge' AND year BETWEEN 1960 AND 1969)
 OR (brand IN ('Ford', 'Triumph') AND year BETWEEN 1970 AND 1979))
 AND sold = false;
 ```
+
+## Ordering, Sorting & Limiting results
 
 ### ORDER BY, DESC
 
