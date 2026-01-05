@@ -98,6 +98,11 @@
 -- SELECT brand, model, condition, price FROM cars
 -- ORDER BY condition DESC, price;
 
+-- SELECT brand, model, condition, price FROM cars
+-- WHERE sold = FALSE
+-- ORDER BY condition DESC, price;
+
 SELECT brand, model, condition, price FROM cars
 WHERE sold = FALSE
+AND condition != 5
 ORDER BY condition DESC, price;
