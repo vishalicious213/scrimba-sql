@@ -44,6 +44,7 @@ SELECT brand, model, condition, year FROM cars;
 ## Filtering results
 
 ### WHERE clause
+*like equals in other languages*
 
 ```sql
 SELECT brand, model, color, price FROM cars WHERE color = 'black';
@@ -71,6 +72,7 @@ SELECT brand, model, price, color FROM cars WHERE color != 'yellow';
 ```
 
 ### NOT & LIKE
+*use LIKE to find a match, % to include __any__ text & _ to include 1 character*
 
 ```sql
 SELECT brand, model, color, year FROM cars WHERE color LIKE '%green%';
@@ -118,6 +120,7 @@ AND sold = false;
 ```
 
 ### BETWEEN
+*use to specify a range, separate with AND*
 
 ```sql
 SELECT brand, model, year, price FROM cars 
@@ -157,6 +160,7 @@ AND sold = false;
 ```
 
 ### IN
+*Use like an array to only include/exclude those values*
 
 ```sql
 SELECT brand, model, price, sold FROM cars 
@@ -181,6 +185,7 @@ AND sold = false;
 ## Ordering, Sorting & Limiting results
 
 ### ORDER BY, DESC
+*DESC is descending (biggest to smallest), ASC is default/ascending*
 
 ```sql
 SELECT brand, model, year FROM cars
@@ -206,6 +211,7 @@ ORDER BY condition DESC, price;
 ```
 
 ### LIMIT
+*limits the number of rows returned from a query*
 
 ```sql
 SELECT brand, model, color, price FROM cars
@@ -218,6 +224,7 @@ LIMIT 5;
 ## Aggregating results
 
 ### COUNT & SUM
+*returns the count of a column or the sum of a column's values*
 
 ```sql
 SELECT COUNT(*) FROM cars -- COUNT returns a single value from our query
@@ -229,3 +236,6 @@ WHERE sold = TRUE;
 SELECT SUM(price) AS total_earnings FROM cars -- adds the values in the named column
 WHERE sold = TRUE;
 ```
+
+### MAX, MIN & AVG
+*finds the maximum, minimum & average value of a column*
