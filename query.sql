@@ -102,7 +102,17 @@
 -- WHERE sold = FALSE
 -- ORDER BY condition DESC, price;
 
-SELECT brand, model, condition, price FROM cars
-WHERE sold = FALSE
-AND condition != 5
-ORDER BY condition DESC, price;
+-- SELECT brand, model, condition, price FROM cars
+-- WHERE sold = FALSE
+-- AND condition != 5
+-- ORDER BY condition DESC, price;
+
+-- SELECT brand, model, year, price FROM cars
+-- ORDER BY price DESC
+-- LIMIT 1;
+
+SELECT brand, model, color, price FROM cars
+WHERE color LIKE '%red%'
+AND sold = false
+ORDER BY price
+LIMIT 5;

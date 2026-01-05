@@ -171,4 +171,19 @@ ORDER BY condition DESC, price;
 SELECT brand, model, condition, price FROM cars
 WHERE sold = false -- note we didn't select this column
 ORDER BY condition DESC, price;
+
+SELECT brand, model, condition, price FROM cars
+WHERE sold IS FALSE
+AND condition != 5
+ORDER BY condition DESC, price;
+```
+
+### LIMIT
+
+```sql
+SELECT brand, model, color, price FROM cars
+WHERE color LIKE '%red%'
+AND sold = false
+ORDER BY price
+LIMIT 5;
 ```
