@@ -164,4 +164,11 @@ ORDER BY brand DESC;
 
 SELECT brand, model, year FROM cars
 ORDER BY brand DESC, year;
+
+SELECT brand, model, condition, price FROM cars
+ORDER BY condition DESC, price;
+
+SELECT brand, model, condition, price FROM cars
+WHERE sold = false -- note we didn't select this column
+ORDER BY condition DESC, price;
 ```
