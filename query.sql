@@ -138,5 +138,15 @@
 -- SELECT CEILING(AVG(price)) FROM cars
 -- WHERE brand = 'Bentley';
 
-SELECT CEILING(AVG(price)) AS avg, MIN(price), MAX(price) FROM cars
-WHERE sold = true;
+-- SELECT CEILING(AVG(price)) AS avg, MIN(price), MAX(price) FROM cars
+-- WHERE sold = true;
+
+-- SELECT brand, COUNT(brand) AS brand_count FROM cars
+-- GROUP BY brand;
+
+-- SELECT condition, COUNT(condition) FROM cars
+-- GROUP BY condition;
+
+SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
+WHERE sold = false
+GROUP BY brand;

@@ -26,6 +26,7 @@
 - COUNT & SUM
 - MAX, MIN & AVG
 - FLOOR & CEILING
+- GROUP BY
 
 ## Selecting columns
 
@@ -267,4 +268,19 @@ WHERE brand = 'Bentley';
 
 SELECT CEILING(AVG(price)) AS avg, MIN(price), MAX(price) FROM cars
 WHERE sold = true;
+```
+
+### GROUP BY
+*group results into sets*
+
+```sql
+SELECT brand, COUNT(brand) AS brand_count FROM cars -- select by brand & get each one's count
+GROUP BY brand; -- return the count for each specific brand, not total overall count
+
+SELECT condition, COUNT(condition) FROM cars
+GROUP BY condition;
+
+SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
+WHERE sold = false -- added a WHERE clause
+GROUP BY brand;
 ```
