@@ -1,11 +1,11 @@
 # Scrimba Intro to SQL
 
-__SELECTING COLUMNS__
+[__SELECTING COLUMNS__](#selecting-columns)
 
 - SELECT all
-- Selecting columns
+- Selecting specific columns
 
-__FILTERING RESULTS__
+[__FILTERING RESULTS__](#filtering-results)
 
 - WHERE clause
 - Numerical filtering
@@ -16,12 +16,12 @@ __FILTERING RESULTS__
 - OR
 - IN
 
-__ORDERING, SORTING & LIMITING RESULTS__
+[__ORDERING, SORTING & LIMITING RESULTS__](#ordering-sorting--limiting-results)
 
 - ORDER BY, DESC
 - LIMIT
 
-__AGGREGATING RESULTS__
+[__AGGREGATING RESULTS__](#aggregating-results)
 
 - COUNT & SUM
 
@@ -33,7 +33,7 @@ __AGGREGATING RESULTS__
 SELECT * FROM cars;
 ```
 
-### Selecting columns
+### Selecting specific columns
 
 ```sql
 SELECT brand, model, price FROM cars;
