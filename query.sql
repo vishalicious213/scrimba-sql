@@ -120,5 +120,8 @@
 -- SELECT COUNT(*) FROM cars
 -- WHERE sold = TRUE;
 
-SELECT COUNT(*) AS total_sold FROM cars
+-- SELECT COUNT(*) AS total_sold FROM cars
+-- WHERE sold = TRUE;
+
+SELECT SUM(price) AS total_earnings FROM cars
 WHERE sold = TRUE;

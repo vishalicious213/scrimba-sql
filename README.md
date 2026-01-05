@@ -215,4 +215,7 @@ WHERE sold = TRUE;
 
 SELECT COUNT(*) AS totel_sold FROM cars -- AS lets us rename a column in our output
 WHERE sold = TRUE;
+
+SELECT SUM(price) AS total_earnings FROM cars -- adds the values in the named column
+WHERE sold = TRUE;
 ```
