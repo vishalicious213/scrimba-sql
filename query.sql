@@ -111,8 +111,14 @@
 -- ORDER BY price DESC
 -- LIMIT 1;
 
-SELECT brand, model, color, price FROM cars
-WHERE color LIKE '%red%'
-AND sold = false
-ORDER BY price
-LIMIT 5;
+-- SELECT brand, model, color, price FROM cars
+-- WHERE color LIKE '%red%'
+-- AND sold = false
+-- ORDER BY price
+-- LIMIT 5;
+
+-- SELECT COUNT(*) FROM cars
+-- WHERE sold = TRUE;
+
+SELECT COUNT(*) AS total_sold FROM cars
+WHERE sold = TRUE;

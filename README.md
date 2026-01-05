@@ -208,3 +208,11 @@ LIMIT 5;
 ## Aggregating results
 
 ### COUNT & SUM
+
+```sql
+SELECT COUNT(*) FROM cars -- COUNT returns a single value from our query
+WHERE sold = TRUE;
+
+SELECT COUNT(*) AS totel_sold FROM cars -- AS lets us rename a column in our output
+WHERE sold = TRUE;
+```
