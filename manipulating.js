@@ -62,7 +62,7 @@ import fs from 'fs'
     `)
 
     // Load the SQL file
-    const query = fs.readFileSync('query.sql', 'utf8')
+    const query = fs.readFileSync('manipulating.sql', 'utf8')
 
     // For section 4 - execute the CRUD operation
     await db.exec(query)
