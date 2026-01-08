@@ -287,6 +287,7 @@ GROUP BY brand;
 
 ### HAVING
 *used to write conditions with aggregations using an aggregrate column*
+*follow this order: WHERE, GROUP BY, HAVING, ORDER BY*
 
 ```sql
 SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
@@ -299,4 +300,10 @@ WHERE sold = true
 GROUP BY year
 HAVING count(year) > 1
 ORDER BY car_count;
+
+SELECT color, COUNT(color) FROM cars
+WHERE sold = FALSE 
+GROUP BY color
+HAVING COUNT(color) > 2
+ORDER BY COUNT(color) DESC;
 ```
