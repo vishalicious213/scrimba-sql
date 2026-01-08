@@ -284,3 +284,19 @@ SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
 WHERE sold = false -- added a WHERE clause
 GROUP BY brand;
 ```
+
+### HAVING
+*used to write conditions with aggregations using an aggregrate column*
+
+```sql
+SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
+WHERE sold = false
+GROUP BY brand
+HAVING COUNT(brand) > 1; -- like a WHERE clause, brands with only 1 car aren't counted
+
+SELECT year, COUNT(year) AS car_count, MAX(price), MIN(price) FROM cars
+WHERE sold = true
+GROUP BY year
+HAVING count(year) > 1
+ORDER BY car_count;
+```

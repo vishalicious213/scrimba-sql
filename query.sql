@@ -147,6 +147,17 @@
 -- SELECT condition, COUNT(condition) FROM cars
 -- GROUP BY condition;
 
-SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
-WHERE sold = false
-GROUP BY brand;
+-- SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
+-- WHERE sold = false
+-- GROUP BY brand;
+
+-- SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
+-- WHERE sold = false
+-- GROUP BY brand
+-- HAVING COUNT(brand) > 1;
+
+SELECT year, COUNT(year) AS car_count, MAX(price), MIN(price) FROM cars
+WHERE sold = true
+GROUP BY year
+HAVING count(year) > 1
+ORDER BY car_count;
