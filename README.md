@@ -27,6 +27,13 @@
 - MAX, MIN & AVG
 - FLOOR & CEILING
 - GROUP BY
+- HAVING
+
+[__MANIPULATING DATA__](#manipulating-data)
+
+- INSERT INTO
+- UPDATE
+- DELETE
 
 ## Selecting columns
 
@@ -307,3 +314,8 @@ GROUP BY color
 HAVING COUNT(color) > 2
 ORDER BY COUNT(color) DESC;
 ```
+
+## Manipulating Data
+
+### INSERT INTO
+
