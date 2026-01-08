@@ -19,7 +19,13 @@
 -- WHERE brand = 'Ford'
 -- AND model = 'Escort RS2000';
 
-UPDATE cars SET
-condition = 5, 
-price = 465000
-WHERE id = 14;
+-- UPDATE cars SET
+-- condition = 5, 
+-- price = 465000
+-- WHERE id = 14;
+
+-- DELETE FROM cars
+-- WHERE condition = 0;
+
+DELETE FROM cars
+WHERE sold = TRUE;

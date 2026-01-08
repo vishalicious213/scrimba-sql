@@ -363,3 +363,14 @@ condition = 1,
 price = 10000
 WHERE brand = 'Porsche' AND sold = FALSE; -- updates all Porsches
 ```
+
+### DELETE
+*the D in CRUD, `DELETE`, deletes data from the db*
+
+```sql
+DELETE FROM cars
+WHERE condition = 0;
+
+DELETE FROM cars
+WHERE sold = TRUE;
+```
