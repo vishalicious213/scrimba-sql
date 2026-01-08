@@ -241,8 +241,8 @@ WHERE sold = TRUE;
 ```
 
 ### MAX, MIN & AVG
-*finds the maximum, minimum & average value of a column*
-*looks like selecting a single value, but its selecting a column & reducing to 1 value*
+- *finds the maximum, minimum & average value of a column*
+- *looks like selecting a single value, but its selecting a column & reducing to 1 value*
 
 ```sql
 SELECT MAX(price) AS most_expensive FROM cars
@@ -253,8 +253,8 @@ WHERE brand = 'Bentley';
 ```
 
 ### FLOOR & CEILING
-*use these to round down/up results for readability (remove long decimals)*
-*CEIL & CEILING are interchangeable, CEILING is universal, CEIL is supported in most SQL implementations*
+- *use these to round down/up results for readability (remove long decimals)*
+- *CEIL & CEILING are interchangeable, CEILING is universal, CEIL is supported in most SQL implementations*
 
 ```SQL
 SELECT FLOOR(AVG(price)) FROM cars
@@ -286,8 +286,8 @@ GROUP BY brand;
 ```
 
 ### HAVING
-*used to write conditions with aggregations using an aggregrate column*
-*follow this order: WHERE, GROUP BY, HAVING, ORDER BY*
+- *used to write conditions with aggregations using an aggregrate column*
+- *follow this order: WHERE, GROUP BY, HAVING, ORDER BY*
 
 ```sql
 SELECT brand, COUNT(brand), FLOOR(AVG(price)) as AVG FROM cars
