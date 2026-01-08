@@ -342,6 +342,10 @@ INSERT INTO cars (
 ```
 
 ### UPDATE
+- *the U in CRUD, `UPDATE`, overwrites data to the db*
+- *select the table that will have data inserted*
+- *specify each column & new value, separate columns with commas*
+- *add a filtering value if needed, like the WHERE clause with an ID to find the right row*
 
 ```sql
 UPDATE cars SET
@@ -353,4 +357,9 @@ UPDATE cars SET
 condition = 5, 
 price = 465000
 WHERE id = 14; -- there were 2 Aston Martin DB4's so we used the ID to be specific
+
+UPDATE cars SET
+condition = 1,
+price = 10000
+WHERE brand = 'Porsche' AND sold = FALSE; -- updates all Porsches
 ```
