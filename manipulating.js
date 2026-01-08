@@ -68,7 +68,8 @@ import fs from 'fs'
     await db.exec(query)
 
     // Display data from the table 
-    const response = await db.query(`SELECT brand, model, year, price FROM cars;`)
+    // const response = await db.query(`SELECT brand, model, year, price FROM cars;`)
+    const response = await db.query(`SELECT id, brand, model, condition, price, sold FROM cars ORDER BY id;`)
 
     console.clear()
     console.table(response.rows)

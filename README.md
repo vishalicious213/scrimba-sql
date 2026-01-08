@@ -318,9 +318,10 @@ ORDER BY COUNT(color) DESC;
 ## Manipulating Data
 
 ### INSERT INTO
-- *the C in CRUD, create, adds data to the db*
-- *select the table & the columns that will have data inserted*
-- *then insert the data in the same order as the specified columns using the VALUES keyword, separate rows with a comma*
+- *the C in CRUD, `CREATE`, adds data to the db*
+- *select the table & the columns that will have data inserted (brand, model, year...)*
+- *insert the data in the same order as the specified columns using the VALUES keyword*
+- *separate rows of data with a comma (the Ford, the Aston Martin, etc.)*
 
 ```sql
 INSERT INTO cars (
@@ -338,4 +339,18 @@ INSERT INTO cars (
 ), (
 	'Porsche', '944 Turbo', 1986, 48000, 'white', 4, FALSE
 );
+```
+
+### UPDATE
+
+```sql
+UPDATE cars SET
+sold = TRUE
+WHERE brand = 'Ford'
+AND model = 'Escort RS2000'; -- there was only one Ford Escord RS2000
+
+UPDATE cars SET
+condition = 5, 
+price = 465000
+WHERE id = 14; -- there were 2 Aston Martin DB4's so we used the ID to be specific
 ```
