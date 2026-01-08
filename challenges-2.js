@@ -1,8 +1,8 @@
-import { PGlite } from '@electric-sql/pglite';
-import fs from 'fs';
+import { PGlite } from '@electric-sql/pglite'
+import fs from 'fs'
 
 (async () => {
-    const db = new PGlite();
+    const db = new PGlite()
     await db.exec(`
             CREATE TABLE IF NOT EXISTS cars (
                 id SERIAL PRIMARY KEY,
@@ -75,14 +75,14 @@ import fs from 'fs';
             ('Triumph', 'Spitfire', 1972, 19000, 'green', 3, true),
             ('Triumph', 'Stag', 1975, 25000, 'red', 4, false),
             ('Triumph', 'Dolomite Sprint', 1974, 21000, 'orange', 3, false);
-    `);
+    `)
 
     // Load the SQL file
-    const query = fs.readFileSync('query.sql', 'utf8');
+    const query = fs.readFileSync('challenges-2.sql', 'utf8')
 
     // Executing simple queries for sections 1 - 3
-    const response = await db.query(query);
+    const response = await db.query(query)
 
-    console.clear();
-    console.table(response.rows);
-})();
+    console.clear()
+    console.table(response.rows)
+})()
