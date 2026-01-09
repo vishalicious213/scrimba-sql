@@ -46,4 +46,4 @@ WHERE condition = 0;
 --  Delete challenge
 
 DELETE FROM cars
-WHERE sold IS TRUE;
+WHERE sold = TRUE;
