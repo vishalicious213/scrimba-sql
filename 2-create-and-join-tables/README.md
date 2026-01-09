@@ -16,4 +16,12 @@ CREATE TABLE IF NOT EXISTS staff (
     name TEXT NOT NULL,
     role TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS sold_cars (
+  id SERIAL PRIMARY KEY,
+  cars_id INTEGER NOT NULL REFERENCES cars(id),
+  seller INTEGER NOT NULL REFERENCES staff(id),
+  sold_date DATE NOT NULL,
+  sold_price INTEGER NOT NULL
+);
 ```
