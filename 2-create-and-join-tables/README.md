@@ -1,0 +1,19 @@
+# Creating & Joining Tables
+
+### Creating tables
+
+```sql
+CREATE TABLE IF NOT EXISTS dealerships (
+    id SERIAL PRIMARY KEY,
+    city TEXT NOT NULL,
+    state CHAR(2) NOT NULL,
+    established DATE NOT NULL
+)
+
+CREATE TABLE IF NOT EXISTS staff (
+    id SERIAL PRIMARY KEY,
+    dealership_id INTEGER NOT NULL REFERENCES dealerships(id),
+    name TEXT NOT NULL,
+    role TEXT NOT NULL
+);
+```
