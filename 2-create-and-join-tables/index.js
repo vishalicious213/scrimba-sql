@@ -15,12 +15,15 @@ import fs from 'fs'
     await db.exec(crudOperations)
 
     // Populate our new tables
-    const populateTables = fs.readFileSync('populate-tables.sql', 'utf8');
+    const populateTables = fs.readFileSync('populate-tables.sql', 'utf8')
     await db.exec(populateTables);
+
+    // Alter the existing cars table
+    const alterCarsTable = fs.readFileSync('alter-table.sql', 'utf8')
+    await db.exec(alterCarsTable)
 
     // Load the SQL query file
     const query = fs.readFileSync('query.sql', 'utf8')
-
 
     // Run the query from the query file
     const response = await db.query(query)
