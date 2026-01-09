@@ -1,0 +1,12 @@
+/*
+	Add the following data to the dealerships table:
+	
+	| city         | state | established |
+	| ------------ | ----- | ----------- |
+	| Chicago      | IL    | 2022-04-14  |
+	| Atlanta      | GA    | 2022-04-14  |
+	| Detroit      | MI    | 2025-05-01  |
+	| Philadelphia | PA    | 2026-07-01  |
+	
+	Note: dates are in YYYY-MM-DD format
+*/
