@@ -46,3 +46,16 @@ VALUES
     (1, 'Mike Anic', 'Mechanic'),
     (1, 'Meg A Byte', 'Data Administrator');
 ```
+
+### Alter table
+
+```sql
+-- 1. Add the column (initially nullable)
+ALTER TABLE cars
+ADD COLUMN dealership_id INTEGER;
+
+-- 2. Insert data to backfill the dealership_id column
+UPDATE cars SET
+dealership_id = 1
+WHERE dealership_id IS NULL;
+```

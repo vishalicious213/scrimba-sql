@@ -3,7 +3,9 @@ ALTER TABLE cars
 ADD COLUMN dealership_id INTEGER;
 
 -- 2. Insert data to backfill the dealership_id column
-
+UPDATE cars SET
+dealership_id = 1
+WHERE dealership_id IS NULL;
 
 -- 3. Add the NOT NULL constraint
 
