@@ -58,4 +58,8 @@ ADD COLUMN dealership_id INTEGER;
 UPDATE cars SET
 dealership_id = 1
 WHERE dealership_id IS NULL;
+
+-- 3. Add the NOT NULL constraint
+ALTER TABLE cars
+ALTER COLUMN dealership_id SET NOT NULL;
 ```
