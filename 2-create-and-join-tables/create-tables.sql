@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS dealerships (
     city TEXT NOT NULL,
     state CHAR(2) NOT NULL,
     established DATE NOT NULL
-)
+);
 
 /*
 	Create the staff table
