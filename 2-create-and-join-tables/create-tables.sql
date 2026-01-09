@@ -38,3 +38,19 @@ CREATE TABLE IF NOT EXISTS dealerships (
     state CHAR(2) NOT NULL,
     established DATE NOT NULL
 )
+
+/*
+	Create the staff table
+		Include these columns:
+			id - serial primary key
+			dealership_id - INTEGER NOT NULL REFERENCES dealerships(id)
+			name - text - NOT NULL
+			role - text - NOT NULL
+*/
+
+CREATE TABLE IF NOT EXISTS staff (
+    id SERIAL PRIMARY KEY,
+    dealership_id INTEGER NOT NULL REFERENCES dealerships(id),
+    name TEXT NOT NULL,
+    role TEXT NOT NULL
+);
