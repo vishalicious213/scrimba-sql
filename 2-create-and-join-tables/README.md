@@ -62,4 +62,9 @@ WHERE dealership_id IS NULL;
 -- 3. Add the NOT NULL constraint
 ALTER TABLE cars
 ALTER COLUMN dealership_id SET NOT NULL;
+
+-- 4. Add the foreign key constraint
+ALTER TABLE cars
+ADD CONSTRAINT dealership_fk FOREIGN KEY (dealership_id) -- dealership_fk, fk = foreign key, we made up the name
+REFERENCES dealerships(id);
 ```
