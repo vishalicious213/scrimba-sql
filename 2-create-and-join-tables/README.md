@@ -20,6 +20,9 @@
 
 - LEFT JOIN
 - RIGHT JOIN
+- DROP
+- INNER JOIN
+- FULL JOIN
 
 ## Creating tables
 
@@ -125,4 +128,24 @@ SELECT brand, model, price, sold, sold_price
 
 SELECT name, role, city, state FROM staff
   RIGHT JOIN dealerships ON dealership_id = dealerships.id;
+```
+
+### DROP
+*the opposite of CREATE*
+
+```sql
+ALTER TABLE staff
+ALTER COLUMN dealership_id DROP NOT NULL; -- drop the NOT NULL constraint
+```
+
+### INNER JOIN
+
+```sql
+
+```
+
+### FULL JOIN
+
+```sql
+
 ```
