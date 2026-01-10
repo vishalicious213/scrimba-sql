@@ -145,6 +145,9 @@ ALTER COLUMN dealership_id DROP NOT NULL; -- drop the NOT NULL constraint
 ```sql
 SELECT name, role, city, state FROM staff
 	INNER JOIN dealerships ON dealership_id = dealerships.id;
+
+SELECT name, role, sold_price FROM staff
+	INNER JOIN sold_cars ON staff.id = seller;
 ```
 
 ### FULL JOIN
@@ -152,6 +155,9 @@ SELECT name, role, city, state FROM staff
 ```sql
 SELECT name, role, city, state FROM staff
 	FULL JOIN dealerships ON dealership_id = dealerships.id;
+
+SELECT name, role, sold_price FROM staff
+	FULL JOIN sold_cars ON staff.id = seller;
 ```
 
 ## Alter Constraints
