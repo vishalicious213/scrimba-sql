@@ -141,11 +141,13 @@ ALTER COLUMN dealership_id DROP NOT NULL; -- drop the NOT NULL constraint
 ### INNER JOIN
 
 ```sql
-
+SELECT name, role, city, state FROM staff
+	INNER JOIN dealerships ON dealership_id = dealerships.id;
 ```
 
 ### FULL JOIN
 
 ```sql
-
+SELECT name, role, city, state FROM staff
+	FULL JOIN dealerships ON dealership_id = dealerships.id;
 ```
