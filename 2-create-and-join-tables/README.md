@@ -24,6 +24,8 @@
 - INNER JOIN
 - FULL JOIN
 
+[ALTER CONSTRAINTS](#alter-constraints)
+
 ## Creating tables
 
 ```sql
@@ -150,4 +152,31 @@ SELECT name, role, city, state FROM staff
 ```sql
 SELECT name, role, city, state FROM staff
 	FULL JOIN dealerships ON dealership_id = dealerships.id;
+```
+
+## Alter Constraints
+
+```sql
+  /*
+	1. Alter table sold_cars
+		alter column seller
+		drop the not null constraint
+*/
+
+ALTER TABLE sold_cars
+ALTER COLUMN seller DROP NOT NULL;
+
+/*
+	2. Update sold_cars setting the seller to null
+	     where the seller was Frankie
+	     hint: you can select his id from staff in query.js first
+*/
+
+UPDATE sold_cars SET seller = NULL WHERE seller = 5;
+
+/*
+	3. Delete Frankie Fender from the staff table
+*/
+
+DELETE FROM staff WHERE name = 'Frankie Fender';
 ```
