@@ -98,3 +98,15 @@ ALTER COLUMN sold SET NOT NULL;
 ```
 
 ## Joins
+
+### Left & Right Join
+
+```sql
+SELECT brand, model, price, sold, sold_price 
+  FROM sold_cars 
+  LEFT JOIN cars ON sold_cars.cars_id = cars.id;
+
+SELECT brand, model, price, sold, sold_price 
+  FROM sold_cars SC -- using alias to call sold_cars SC
+  LEFT JOIN cars C ON SC.cars_id = C.id; -- using alias to call cars C
+```
