@@ -67,4 +67,13 @@ ALTER COLUMN dealership_id SET NOT NULL;
 ALTER TABLE cars
 ADD CONSTRAINT dealership_fk FOREIGN KEY (dealership_id) -- dealership_fk, fk = foreign key, we made up the name
 REFERENCES dealerships(id);
+
+ALTER TABLE cars
+ALTER COLUMN brand SET NOT NULL,
+ALTER COLUMN model SET NOT NULL,
+ALTER COLUMN year SET NOT NULL,
+ALTER COLUMN price SET NOT NULL,
+ALTER COLUMN color SET NOT NULL,
+ALTER COLUMN condition SET NOT NULL,
+ALTER COLUMN sold SET NOT NULL;
 ```
