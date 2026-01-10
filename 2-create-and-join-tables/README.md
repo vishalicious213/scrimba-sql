@@ -18,6 +18,8 @@
 
 [JOINS](#joins)
 
+- LEFT JOIN
+- RIGHT JOIN
 
 ## Creating tables
 
@@ -99,7 +101,7 @@ ALTER COLUMN sold SET NOT NULL;
 
 ## Joins
 
-### Left & Right Join
+### LEFT JOIN
 
 ```sql
 SELECT brand, model, price, sold, sold_price 
@@ -109,4 +111,18 @@ SELECT brand, model, price, sold, sold_price
 SELECT brand, model, price, sold, sold_price 
   FROM sold_cars SC -- using alias to call sold_cars SC
   LEFT JOIN cars C ON SC.cars_id = C.id; -- using alias to call cars C
+
+SELECT name, role, city, state FROM staff
+  LEFT JOIN dealerships ON dealership_id = dealerships.id;
+```
+
+### RIGHT JOIN
+
+```sql
+SELECT brand, model, price, sold, sold_price 
+  FROM sold_cars SC
+  RIGHT JOIN cars C ON SC.cars_id = C.id;
+
+SELECT name, role, city, state FROM staff
+  RIGHT JOIN dealerships ON dealership_id = dealerships.id;
 ```

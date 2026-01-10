@@ -3,6 +3,12 @@
 -- SELECT * FROM staff
 -- SELECT id, dealership_id, brand, model FROM cars;
 
-SELECT brand, model, price, sold, sold_price 
-  FROM sold_cars SC
-  LEFT JOIN cars C ON SC.cars_id = C.id;
+-- SELECT brand, model, price, sold, sold_price 
+--   FROM sold_cars SC
+--   LEFT JOIN cars C ON SC.cars_id = C.id;
+
+-- SELECT name, role, city, state FROM staff
+--   LEFT JOIN dealerships ON dealership_id = dealerships.id;
+
+-- SELECT name, role, city, state FROM staff
+--   RIGHT JOIN dealerships ON dealership_id = dealerships.id;
