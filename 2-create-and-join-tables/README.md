@@ -1,6 +1,25 @@
 # Creating & Joining Tables
 
-### Creating tables
+[CREATING TABLES](#creating-tables)
+
+- CREATE TABLE IF NOT EXISTS
+
+[POPULATING TABLES](#populating-tables)
+
+- INSERT INTO & VALUES
+
+[ALTER TABLE](#alter-table)
+
+- ALTER TABLE, ADD COLUMN
+- SET
+- ALTER COLUMN
+- ADD CONSTRAINT
+- FOREIGN KEY
+
+[JOINS](#joins)
+
+
+## Creating tables
 
 ```sql
 CREATE TABLE IF NOT EXISTS dealerships (
@@ -26,7 +45,7 @@ CREATE TABLE IF NOT EXISTS sold_cars (
 );
 ```
 
-### Populating tables
+## Populating tables
 
 ```sql
 INSERT INTO dealerships (city, state, established)
@@ -47,7 +66,7 @@ VALUES
     (1, 'Meg A Byte', 'Data Administrator');
 ```
 
-### Alter table
+## Alter table
 
 ```sql
 -- 1. Add the column (initially nullable)
@@ -77,3 +96,5 @@ ALTER COLUMN color SET NOT NULL,
 ALTER COLUMN condition SET NOT NULL,
 ALTER COLUMN sold SET NOT NULL;
 ```
+
+## Joins
