@@ -26,6 +26,8 @@
 
 [ALTER CONSTRAINTS](#alter-constraints)
 
+[AGGREGATES](#aggregates)
+
 ## Creating tables
 
 ```sql
@@ -185,4 +187,22 @@ UPDATE sold_cars SET seller = NULL WHERE seller = 5;
 */
 
 DELETE FROM staff WHERE name = 'Frankie Fender';
+```
+
+## Aggregates
+
+```sql
+/*
+	Select the city and average car price
+	Round that car price to a whole number
+	
+	Only show dealerships which have cars
+	
+	Group by dealership city and state
+*/
+
+SELECT city, state, ROUND(AVG(price), 2) AS avg_price
+	FROM cars
+	LEFT JOIN dealerships D ON dealership_id = D.id
+GROUP BY city, state;
 ```
