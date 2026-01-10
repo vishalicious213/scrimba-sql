@@ -28,6 +28,8 @@
 
 [AGGREGATES](#aggregates)
 
+[JOINING MULTIPLE TABLES](#joining-multiple-tables)
+
 ## Creating tables
 
 ```sql
@@ -249,4 +251,33 @@ SELECT city, state, COUNT(C.id) AS car_count
 WHERE sold IS NOT TRUE
 GROUP BY city, state
 ORDER BY car_count;
+```
+
+## Joining multiple tables
+*joining multiple tables by chaining JOIN clauses*
+
+```sql
+/*
+	List:
+		- the brand and model of cars
+		- include the name of the seller,
+		- the city they work in
+		- the date of the sale
+	
+	Format the sold_date as DD-MM-YYYY using TO_CHAR()
+	
+	Use sold_cars as the left table and join other tables
+		show sold_cars when we have no record of the seller
+*/
+
+SELECT
+	C.brand,
+	C.model,
+	S.name AS seller_name,
+	D.city,
+	TO_CHAR(SC.sold_date, 'DD-MM-YYYY') AS date_of_sale
+FROM sold_cars SC
+	INNER JOIN cars C ON SC.cars_id = C.id
+	LEFT JOIN staff S ON SC.seller = S.id
+	LEFT JOIN dealerships D ON S.dealership_id = D.id;
 ```
