@@ -22,6 +22,10 @@ import fs from 'fs'
     const alterCarsTable = fs.readFileSync('alter-table.sql', 'utf8')
     await db.exec(alterCarsTable)
 
+    // Insert new data to the tables
+    const insertNewData = fs.readFileSync('insert-new-data.sql', 'utf-8');
+    await db.exec(insertNewData);
+
     // Load the SQL query file
     const query = fs.readFileSync('query.sql', 'utf8')
 
