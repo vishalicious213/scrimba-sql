@@ -1,5 +1,8 @@
 # Creating & Joining Tables
 
+![](../img/table-relationships.jpg)
+⬆️ Table relationships
+
 [CREATING TABLES](#creating-tables)
 
 - CREATE TABLE IF NOT EXISTS
@@ -110,7 +113,18 @@ ALTER COLUMN sold SET NOT NULL;
 
 ## Joins
 
+![](../img/joins.jpg)
+⬆️ Joins
+
+![](../img/join-types.jpg)
+⬆️ Join types
+
+![](../img/join-sides.jpg)
+⬆️ Join sides
+
 ### LEFT JOIN
+
+![](../img/left-join.jpg)
 
 ```sql
 SELECT brand, model, price, sold, sold_price 
@@ -126,6 +140,8 @@ SELECT name, role, city, state FROM staff
 ```
 
 ### RIGHT JOIN
+
+![](../img/right-join.jpg)
 
 ```sql
 SELECT brand, model, price, sold, sold_price 
@@ -146,6 +162,8 @@ ALTER COLUMN dealership_id DROP NOT NULL; -- drop the NOT NULL constraint
 
 ### INNER JOIN
 
+![](../img/inner-join.jpg)
+
 ```sql
 SELECT name, role, city, state FROM staff
 	INNER JOIN dealerships ON dealership_id = dealerships.id;
@@ -155,6 +173,8 @@ SELECT name, role, sold_price FROM staff
 ```
 
 ### FULL JOIN
+
+![](../img/full-join.jpg)
 
 ```sql
 SELECT name, role, city, state FROM staff
