@@ -49,6 +49,15 @@ SELECT SUM(sold_price) FROM sold_cars
 );
 ```
 
+```sql
+SELECT brand, model, price FROM cars 
+  WHERE price > ANY (
+    SELECT SUM(sold_price) FROM sold_cars
+    JOIN staff ON staff.id = sold_cars.seller
+      GROUP BY staff.dealership_id
+  );
+  ```
+
 ## ALL
 *attach to subquery to find records where all in subquery match*
 
