@@ -30,6 +30,25 @@ SELECT SC.sold_price FROM sold_cars SC
     WHERE S.name = 'Frankie Fender'
 ```
 
+```sql
+SELECT brand, model, price FROM cars
+WHERE price < ANY (
+  SELECT price FROM cars
+  WHERE brand = 'Ford'
+) AND brand = 'Volkswagen'
+AND sold = FALSE;
+```
+
+```sql
+SELECT S.name, SC.sold_price
+  FROM staff S
+  JOIN sold_cars SC ON S.id = SC.seller
+WHERE SC.sold_price > ANY (
+SELECT SUM(sold_price) FROM sold_cars
+  GROUP BY seller
+);
+```
+
 ## ALL
 *attach to subquery to find records where all in subquery match*
 
