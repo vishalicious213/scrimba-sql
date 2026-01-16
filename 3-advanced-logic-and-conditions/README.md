@@ -121,6 +121,15 @@ SELECT city, state
   );
 ```
 
+```sql
+SELECT name FROM staff S
+  WHERE role = 'Salesperson'
+  AND NOT EXISTS (
+    SELECT 1 FROM sold_cars SC
+      WHERE SC.seller = s.id AND SC.sold_price > 45000
+  );
+```
+
 ### DISTINCT
 *use the DISTINCT keyword to only get unique values from the table*
 
