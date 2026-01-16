@@ -6,6 +6,9 @@
 
 [EXISTS](#exists)
 
+- DISTINCT
+- NOT
+
 [CASE IN SELECT](#case-in-select)
 
 [CASE IN WHERE](#case-in-where)
@@ -99,6 +102,14 @@ SELECT color FROM cars
   );
 -- don't need to select a specific column, so long as SOMETHING
 -- returns we know a record matches the condition
+```
+
+```sql
+SELECT city, state, TO_CHAR(established, 'YYYY-MM-DD') AS est
+  FROM dealerships D
+  WHERE NOT EXISTS (
+    SELECT 1 FROM cars WHERE dealership_id = D.id
+  );
 ```
 
 ### DISTINCT
