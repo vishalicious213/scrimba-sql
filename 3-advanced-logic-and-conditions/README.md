@@ -112,6 +112,15 @@ SELECT city, state, TO_CHAR(established, 'YYYY-MM-DD') AS est
   );
 ```
 
+```sql
+SELECT city, state
+  FROM dealerships D
+  WHERE EXISTS (
+    SELECT 1 FROM cars C
+      WHERE C.dealership_id = D.id AND C.price > 50000
+  );
+```
+
 ### DISTINCT
 *use the DISTINCT keyword to only get unique values from the table*
 
