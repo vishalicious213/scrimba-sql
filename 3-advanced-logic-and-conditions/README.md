@@ -203,6 +203,18 @@ SELECT brand, model, condition, year, price
 ORDER BY year, condition;
 ```
 
+```sql
+SELECT brand, model, condition, price FROM cars
+WHERE sold = false
+AND CASE
+	WHEN condition >= 4 THEN price < 100000
+	WHEN condition >= 3 THEN price < 50000
+	WHEN condition >= 1 THEN price < 20000
+	ELSE TRUE
+END
+ORDER BY condition;
+```
+
 ## CASE IN UPDATE
 
 ```sql
