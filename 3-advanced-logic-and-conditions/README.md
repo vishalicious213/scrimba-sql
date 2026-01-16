@@ -218,6 +218,13 @@ ORDER BY condition;
 ## CASE IN UPDATE
 
 ```sql
-
+UPDATE cars
+  SET price = price * CASE
+  WHEN model = 'DB5' THEN 1.15
+  WHEN model LIKE 'DB_' THEN 1.1
+  ELSE 1.05
+  END
+WHERE sold IS FALSE
+AND brand = 'Aston Martin';
 ```
 
