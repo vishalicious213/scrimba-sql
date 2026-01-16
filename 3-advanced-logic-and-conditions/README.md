@@ -101,6 +101,27 @@ SELECT color FROM cars
 -- returns we know a record matches the condition
 ```
 
+### DISTINCT
+*use the DISTINCT keyword to only get unique values from the table*
+
+```sql
+SELECT DISTINCT color FROM cars
+    WHERE EXISTS (
+        SELECT 1 FROM sold_cars WHERE cars_id = cars.id
+    )
+    ORDER BY color; -- sorting/ordering
+```
+
+### Getting the opposite with NOT
+
+```sql
+SELECT DISTINCT color FROM cars
+    WHERE NOT EXISTS (
+        SELECT 1 FROM sold_cars WHERE cars_id = cars.id
+    )
+    ORDER BY color;
+```
+
 # CASE statements provide conditional logic like `if` statements
 
 ## CASE IN SELECT
