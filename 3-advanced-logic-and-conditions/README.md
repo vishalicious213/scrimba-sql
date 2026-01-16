@@ -89,10 +89,16 @@ ORDER BY city;
 ```
 
 ## EXISTS
-*look for single existing record within subquery*
+- *look for single existing record within subquery*
+- *returns true if subquery returns at least one row from db*
 
 ```sql
-
+SELECT color FROM cars
+  WHERE EXISTS (
+    SELECT 1 FROM sold_cars WHERE cars_id = cars.id
+  );
+-- don't need to select a specific column, so long as SOMETHING
+-- returns we know a record matches the condition
 ```
 
 # CASE statements provide conditional logic like `if` statements
