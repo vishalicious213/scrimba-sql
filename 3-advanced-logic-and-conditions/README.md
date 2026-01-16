@@ -185,6 +185,23 @@ SELECT S.name, S.role, S.dealership_id,
     ORDER BY bonus, dealership_id;
 ```
 
+```sql
+SELECT
+    D.city,
+    COUNT(sc.id) AS total_sales,
+        CASE
+            WHEN COUNT(sc.id) >= 10 THEN 'Outperforming'
+        WHEN COUNT(sc.id) >= 5 THEN 'Meeting targets'
+        WHEN COUNT(sc.id) >= 1 THEN 'Underperforming'
+        ELSE 'No sales'
+    END AS performance_level
+        FROM dealerships D
+        LEFT JOIN staff S ON S.dealership_id = D.id
+        LEFT JOIN sold_cars sc ON sc.seller = S.id
+        GROUP BY D.city
+        ORDER BY total_sales;
+```
+
 ## CASE IN WHERE
 *Use CASE in WHERE statements to build conditions that rely on other conditions*
 
