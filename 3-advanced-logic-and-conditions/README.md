@@ -186,9 +186,21 @@ SELECT S.name, S.role, S.dealership_id,
 ```
 
 ## CASE IN WHERE
+*Use CASE in WHERE statements to build conditions that rely on other conditions*
 
 ```sql
-
+SELECT brand, model, condition, year, price
+	FROM cars
+	WHERE
+	sold IS FALSE
+	AND CASE
+		WHEN year <= 1960 THEN condition >= 4
+		WHEN year <= 1970 THEN condition >= 3
+		WHEN year <= 1980 THEN condition >= 2
+		WHEN year <= 1990 THEN condition >= 1
+		ELSE TRUE
+	END
+ORDER BY year, condition;
 ```
 
 ## CASE IN UPDATE
