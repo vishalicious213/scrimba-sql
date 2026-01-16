@@ -151,12 +151,24 @@ SELECT DISTINCT color FROM cars
     ORDER BY color;
 ```
 
-# CASE statements provide conditional logic like `if` statements
+# CASE statements provide conditional logic like `if` statements in other languages
+
+- Format outputs
+- Conditionally select records
+- Update records based on conditions
 
 ## CASE IN SELECT
 
 ```sql
-
+SELECT brand, model, condtion, 
+    CASE
+        WHEN condition >= 4 THEN 'Excellent'
+        WHEN condition >= 3 THEN 'Fair'
+        WHEN condition >= 1 THEN 'Poor'
+        ELSE 'Wrecked'
+    END AS condition_label
+    FROM cars
+    ORDER BY condition DESC;
 ```
 
 ## CASE IN WHERE
