@@ -228,3 +228,12 @@ WHERE sold IS FALSE
 AND brand = 'Aston Martin';
 ```
 
+```sql
+UPDATE cars
+  SET price = price * CASE
+  WHEN dealership_id = 1 THEN 1.2
+  WHEN dealership_id = 3 THEN 0.8
+  ELSE 1.0
+  END
+WHERE sold IS FALSE;
+```
