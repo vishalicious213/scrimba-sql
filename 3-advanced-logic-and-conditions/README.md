@@ -79,6 +79,15 @@ WHERE year < ALL (
 ORDER BY year;
 ```
 
+```sql
+SELECT brand, model, city, price FROM cars
+  JOIN dealerships ON dealership_id = dealerships.id
+  WHERE price > ALL (
+      SELECT sold_price FROM sold_cars
+  )
+ORDER BY city;
+```
+
 ## EXISTS
 *look for single existing record within subquery*
 
