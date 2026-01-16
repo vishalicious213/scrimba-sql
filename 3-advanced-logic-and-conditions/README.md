@@ -62,7 +62,12 @@ SELECT brand, model, price FROM cars
 *attach to subquery to find records where all in subquery match*
 
 ```sql
-
+SELECT brand, model, condition, price
+  FROM cars
+WHERE price < ALL (
+  SELECT price FROM cars
+    WHERE condition = 3
+);
 ```
 
 ## EXISTS
