@@ -202,6 +202,20 @@ SELECT
         ORDER BY total_sales;
 ```
 
+```sql
+SELECT
+	CASE
+		WHEN EXTRACT(MONTH FROM sold_date) IN (1,2,3) THEN 'Q1'
+		WHEN EXTRACT(MONTH FROM sold_date) IN (4,5,6) THEN 'Q2'
+    WHEN EXTRACT(MONTH FROM sold_date) IN (7,8,9) THEN 'Q3'
+		ELSE 'Q4'
+	END AS quarter,
+	COUNT(*) AS sold_cars
+	FROM sold_cars
+	GROUP BY quarter
+	ORDER BY quarter;
+```
+
 ## CASE IN WHERE
 *Use CASE in WHERE statements to build conditions that rely on other conditions*
 
