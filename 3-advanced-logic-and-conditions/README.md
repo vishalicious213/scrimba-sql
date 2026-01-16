@@ -70,6 +70,15 @@ WHERE price < ALL (
 );
 ```
 
+```sql
+SELECT brand, model, year FROM cars
+WHERE year < ALL (
+  SELECT year FROM cars
+  WHERE brand = 'Ford'
+)
+ORDER BY year;
+```
+
 ## EXISTS
 *look for single existing record within subquery*
 
